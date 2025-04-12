@@ -1,0 +1,41 @@
+<nav class="menu overflow-hidden" [style.height.px]="navHeight()">
+  <ul #ulEl class="flex flex-col justify-center gap-8 p-10 items-end">
+    <li>
+      <a
+        (click)="closeNav()"
+        routerLinkActive="link-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLink="/"
+        class="link font-bold text-3xl text-extend-text-black p-4 block"
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        (click)="closeNav()"
+        routerLinkActive="link-active"
+        routerLink="shop"
+        class="link font-bold text-3xl text-extend-text-black p-4 block"
+        >Shop</a
+      >
+    </li>
+    <li>
+      <a
+        (click)="closeNav()"
+        routerLinkActive="link-active"
+        routerLink="about"
+        class="link font-bold text-3xl text-extend-text-black p-4 block"
+        >About Us</a
+      >
+    </li>
+    <li>
+      <a
+        (click)="closeNav()"
+        routerLinkActive="link-active"
+        routerLink="contact"
+        class="link font-bold text-3xl text-extend-text-black p-4 block"
+        >Contact Us</a
+      >
+    </li>
+  </ul>
+</nav>

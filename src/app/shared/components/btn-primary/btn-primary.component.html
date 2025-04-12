@@ -1,0 +1,22 @@
+@if(isBtn()){
+<button
+  class="flex gap-3 text-extend-backgroud-50 px-5 py-3 rounded-full fill"
+  [class]="classes()">
+  {{ text() }}@if(haveIcon()){<img
+    src="assets/images/icons/shopping.svg"
+    alt="shopping"
+    width="24"
+    height="24" />}
+</button>
+}@else {
+<a
+  class="flex gap-3 text-extend-backgroud-50 px-5 py-3 rounded-full fill"
+  [routerLink]="href()"
+  [class]="classes()"
+  >{{ text() }}@if(haveIcon()){<img
+    src="assets/images/icons/shopping.svg"
+    alt="shopping"
+    width="24"
+    height="24" />}</a
+>
+}

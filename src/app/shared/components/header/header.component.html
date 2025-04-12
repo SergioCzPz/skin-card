@@ -1,0 +1,22 @@
+<header #headerEl class="flex flex-col px-5 md:px-16 py-6">
+  <div class="flex justify-between items-center w-full">
+    <div>
+      <a routerLink="/">
+        <img src="cards.svg" alt="cards" width="44" height="44" />
+      </a>
+    </div>
+
+    <div class="flex items-center gap-6">
+      <app-btn-primary
+        [href]="'shop'"
+        [text]="'Shop'"
+        [haveIcon]="true"
+        [isDark]="true" />
+      <button (click)="toggleMenu()" class="p-3">
+        <img [src]="btnSrc()" alt="menu" width="28" height="24" />
+      </button>
+    </div>
+  </div>
+
+  <app-navbar [displayMenu]="displayMenu" [headerHeight]="headerHeight()" />
+</header>
