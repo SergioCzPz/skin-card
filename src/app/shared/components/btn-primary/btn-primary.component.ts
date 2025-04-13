@@ -12,7 +12,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './btn-primary.component.html',
   styles: `
     :host {
-      display: block;
+      display: inline-block;
     }
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,

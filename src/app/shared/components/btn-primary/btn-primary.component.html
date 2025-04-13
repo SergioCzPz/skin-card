@@ -1,6 +1,6 @@
 @if(isBtn()){
 <button
-  class="flex gap-3 text-extend-backgroud-50 px-5 py-3 rounded-full fill"
+  class="flex gap-3 text-extend-backgroud-50 px-5 py-3 rounded-full btn-fill border-2 border-extend-primary-900"
   [class]="classes()">
   {{ text() }}@if(haveIcon()){<img
     src="assets/images/icons/shopping.svg"
@@ -10,7 +10,7 @@
 </button>
 }@else {
 <a
-  class="flex gap-3 text-extend-backgroud-50 px-5 py-3 rounded-full fill"
+  class="flex gap-3 text-extend-backgroud-50 px-5 py-3 rounded-full btn-fill border-2 border-extend-primary-900"
   [routerLink]="href()"
   [class]="classes()"
   >{{ text() }}@if(haveIcon()){<img

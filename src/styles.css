@@ -80,13 +80,13 @@
     transition-property: width, left;
   }
 
-  .fill {
+  .btn-fill {
     position: relative;
     z-index: 1;
     overflow: hidden;
   }
 
-  .fill::before {
+  .btn-fill::before {
     content: '';
     position: absolute;
     left: 0;
@@ -96,10 +96,10 @@
     transform: translateX(-100%);
     transition: all 0.3s;
     z-index: -1;
-    @apply bg-extend-primary-500;
+    @apply bg-extend-accent-600;
   }
 
-  .fill:hover::before {
+  .btn-fill:hover::before {
     transform: translateX(0);
   }
 }

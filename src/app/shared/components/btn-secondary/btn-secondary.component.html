@@ -1,0 +1,12 @@
+@if(href() === undefined) {
+<button
+  class="border-2 border-extend-primary-900 text-extend-text-black py-3 px-5 rounded-full btn-fill hover:text-extend-backgroud-300 transition-colors duration-300">
+  {{ text() }}
+</button>
+}@else {
+<a
+  class="border-2 border-extend-primary-900 text-extend-text-black py-3 px-5 rounded-full btn-fill block hover:text-extend-backgroud-300 transition-colors duration-300"
+  [href]="href()"
+  >{{ text() }}</a
+>
+}
