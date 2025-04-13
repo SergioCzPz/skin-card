@@ -24,6 +24,8 @@ export class BtnPrimaryComponent {
   public haveIcon = input<boolean>(false);
   protected isBtn = computed(() => this.href() === undefined);
   protected classes = computed(() =>
-    this.isDark() ? 'bg-extend-primary-900' : 'bg-transparent '
+    this.isDark()
+      ? 'bg-extend-primary-900 border-extend-primary-900'
+      : 'bg-transparent border-extend-backgroud-300'
   );
 }

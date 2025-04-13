@@ -22,3 +22,84 @@
     <app-canvas />
   </div>
 </section>
+
+<section
+  class="flex flex-col gap-12 bg-extend-accent-900 text-extend-backgroud-300 py-16 px-5 md:py-32 md:px-16 md:flex-row-reverse">
+  <div class="flex flex-col gap-6 md:gap-8 md:flex-1 md:justify-center">
+    <ul class="flex flex-col gap-6 md:gap-8">
+      <li class="flex gap-6">
+        <div>
+          <img
+            class="max-w-none"
+            src="assets/images/icons/stars-white.svg"
+            alt="stars"
+            width="48"
+            height="48" />
+        </div>
+        <div>
+          <h3 class="text-xl font-bold md:text-2xl">Custom Card Designs</h3>
+          <p class="text-base">
+            Transform your card with unique decals that reflect your personality
+            and style.
+          </p>
+        </div>
+      </li>
+
+      <li class="flex gap-6">
+        <div>
+          <img
+            class="max-w-none"
+            src="assets/images/icons/paint-white.svg"
+            alt="paint"
+            width="48"
+            height="48" />
+        </div>
+        <div>
+          <h3 class="text-xl font-bold md:text-2xl">Easy Application</h3>
+          <p class="text-base">
+            Our decals are simple to apply and remove, ensuring a hassle-free
+            experience.
+          </p>
+        </div>
+      </li>
+
+      <li class="flex gap-6">
+        <div>
+          <img
+            class="max-w-none"
+            src="assets/images/icons/price-white.svg"
+            alt="price"
+            width="48"
+            height="48" />
+        </div>
+        <div>
+          <h3 class="text-xl font-bold md:text-2xl">Affordable Pricing</h3>
+          <p class="text-base">
+            Enjoy stylish card decals without breaking the bank—great designs at
+            unbeatable prices.
+          </p>
+        </div>
+      </li>
+    </ul>
+
+    <div class="flex gap-6">
+      <app-btn-primary
+        [haveIcon]="true"
+        [href]="'shop'"
+        [text]="'Shop'"
+        [isDark]="false" />
+      <a class="flex items-center py-3 px-3 gap-2 link" routerLink="about"
+        >Learn More<img src="assets/images/icons/arrow-white.svg" alt="arrow"
+      /></a>
+    </div>
+  </div>
+
+  <div class="md:flex-1">
+    <img
+      class="rounded-lg object-cover md:w-full md:max-h-[40rem]"
+      src="assets/images/workers/worker.jpg"
+      alt="worker"
+      width="335"
+      height="350" />
+  </div>
+</section>
