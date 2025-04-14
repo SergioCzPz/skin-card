@@ -1,18 +1,12 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { BtnPrimaryComponent } from '@shared/components/btn-primary/btn-primary.component';
 import { BtnSecondaryComponent } from '@shared/components/btn-secondary/btn-secondary.component';
-import { CanvasComponent } from '../../components/canvas/canvas.component';
-import { RouterLink } from '@angular/router';
+import { CanvasComponent } from 'src/app/features/components/canvas/canvas.component';
 
 @Component({
-  selector: 'app-home',
-  imports: [
-    BtnPrimaryComponent,
-    BtnSecondaryComponent,
-    CanvasComponent,
-    RouterLink,
-  ],
-  templateUrl: './home.component.html',
+  selector: 'app-hero',
+  imports: [BtnPrimaryComponent, BtnSecondaryComponent, CanvasComponent],
+  templateUrl: './hero.component.html',
   styles: `
     :host {
       display: block;
@@ -20,4 +14,4 @@ import { RouterLink } from '@angular/router';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent {}
+export class HeroComponent {}
