@@ -5,6 +5,7 @@ import { GalleryComponent } from '../../sections/gallery/gallery.component';
 import { BenefitComponent } from '../../sections/benefit/benefit.component';
 import { StatsComponent } from '../../sections/stats/stats.component';
 import { TestimonialsComponent } from '../../sections/testimonials/testimonials.component';
+import { CtaComponent } from '../../sections/cta/cta.component';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,7 @@ import { TestimonialsComponent } from '../../sections/testimonials/testimonials.
     BenefitComponent,
     StatsComponent,
     TestimonialsComponent,
+    CtaComponent,
   ],
   templateUrl: './home.component.html',
   styles: `

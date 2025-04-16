@@ -8,6 +8,7 @@ import { Testimonial } from '@shared/types/testimonial';
   styles: `
     :host {
       display: block;
+      flex: 1 1 0%;
     }
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
