@@ -4,6 +4,7 @@ import { FeaturesComponent } from '../../sections/features/features.component';
 import { GalleryComponent } from '../../sections/gallery/gallery.component';
 import { BenefitComponent } from '../../sections/benefit/benefit.component';
 import { StatsComponent } from '../../sections/stats/stats.component';
+import { TestimonialsComponent } from '../../sections/testimonials/testimonials.component';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,7 @@ import { StatsComponent } from '../../sections/stats/stats.component';
     GalleryComponent,
     BenefitComponent,
     StatsComponent,
+    TestimonialsComponent,
   ],
   templateUrl: './home.component.html',
   styles: `

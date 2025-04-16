@@ -1,0 +1,17 @@
+<section
+  class="py-16 px-5 flex flex-col gap-12 text-extend-text-black md:py-28 md:px-16 md:gap-20">
+  <div class="flex flex-col gap-4 md:gap-6">
+    <h2 class="text-center text-4xl font-bold md:text-5xl">
+      Customer Testimonials
+    </h2>
+    <p class="text-center text-base md:text-lg">
+      I Love How My Card Looks Now!
+    </p>
+  </div>
+
+  <div class="flex flex-col gap-8 md:gap-8 lg:flex-row">
+    @for (testimonial of testimonials; track $index) {
+    <app-testimonial-card [testimonial]="testimonial" />
+    }
+  </div>
+</section>

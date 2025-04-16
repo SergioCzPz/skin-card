@@ -7,7 +7,9 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@shared/components/*": ["./src/app/shared/components/*"]
+      "@shared/components/*": ["./src/app/shared/components/*"],
+      "@constants/*": ["./src/app/shared/constants/*"],
+      "@shared/types/*": ["./src/app/shared/types/*"]
     },
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,

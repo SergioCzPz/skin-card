@@ -1,0 +1,53 @@
+<div
+  class="bg-extend-backgroud-600 border-2 border-extend-accent-800/70 p-6 rounded-xl flex flex-col gap-5 md:p-8 md:gap-6">
+  <div class="flex flex-col gap-5 md:gap-6">
+    <div class="flex gap-1">
+      <img
+        src="assets/images/icons/star.svg"
+        alt="star"
+        width="20"
+        height="20"
+        class="object-cover" />
+      <img
+        src="assets/images/icons/star.svg"
+        alt="star"
+        width="20"
+        height="20"
+        class="object-cover" />
+      <img
+        src="assets/images/icons/star.svg"
+        alt="star"
+        width="20"
+        height="20"
+        class="object-cover" />
+      <img
+        src="assets/images/icons/star.svg"
+        alt="star"
+        width="20"
+        height="20"
+        class="object-cover" />
+      <img
+        src="assets/images/icons/star.svg"
+        alt="star"
+        width="20"
+        height="20"
+        class="object-cover" />
+    </div>
+
+    <p class="text-base md:text-lg">"{{ testimonial().review }}"</p>
+  </div>
+
+  <div class="flex flex-col gap-4 md:flex-row md:gap-4">
+    <img
+      [src]="testimonial().photo"
+      [alt]="testimonial().name"
+      width="48"
+      height="48"
+      class="object-cover rounded-full w-12 h-12" />
+
+    <div>
+      <p class="text-base font-bold">{{ testimonial().name }}</p>
+      <p class="text-base">{{ testimonial().position }}</p>
+    </div>
+  </div>
+</div>
