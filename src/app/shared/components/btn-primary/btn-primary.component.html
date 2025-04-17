@@ -1,6 +1,6 @@
 @if(isBtn()){
 <button
-  class="flex gap-3 px-5 py-3 rounded-full btn-fill border-2 hover:text-extend-backgroud-300 transition-colors duration-300"
+  class="flex gap-3 px-5 py-3 rounded-full btn-fill border-2 hover:text-extend-backgroud-300 transition-colors duration-300 w-full justify-center"
   [class]="classes()">
   {{ text() }}@if(haveIcon()){<img
     [src]="iconSrc()"
@@ -10,7 +10,7 @@
 </button>
 }@else {
 <a
-  class="flex gap-3 px-5 py-3 rounded-full btn-fill border-2 hover:text-extend-backgroud-300 transition-colors duration-300"
+  class="flex gap-3 px-5 py-3 rounded-full btn-fill border-2 hover:text-extend-backgroud-300 transition-colors duration-300 w-full justify-center"
   [routerLink]="href()"
   [class]="classes()"
   >{{ text() }}@if(haveIcon()){<img

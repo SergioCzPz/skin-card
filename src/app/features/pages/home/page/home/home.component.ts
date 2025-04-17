@@ -6,6 +6,7 @@ import { BenefitComponent } from '../../sections/benefit/benefit.component';
 import { StatsComponent } from '../../sections/stats/stats.component';
 import { TestimonialsComponent } from '../../sections/testimonials/testimonials.component';
 import { CtaComponent } from '../../sections/cta/cta.component';
+import { JoinComponent } from '../../sections/join/join.component';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +18,7 @@ import { CtaComponent } from '../../sections/cta/cta.component';
     StatsComponent,
     TestimonialsComponent,
     CtaComponent,
+    JoinComponent,
   ],
   templateUrl: './home.component.html',
   styles: `

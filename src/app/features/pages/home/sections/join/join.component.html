@@ -1,0 +1,36 @@
+<section
+  class="flex flex-col gap-12 text-extend-text-black py-16 px-5 md:py-28 md:px-16 md:flex-row overflow-hidden md:gap-20 md:items-center">
+  <div class="flex flex-col gap-6 md:flex-1 md:gap-8">
+    <div class="flex flex-col gap-5 md:gap-6">
+      <h2 class="text-4xl font-bold md:text-5xl">Join Our Design Community</h2>
+      <p class="text-base md:text-lg">
+        Stay updated with our latest designs and exclusive promotions delivered
+        straight to your inbox.
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-4">
+      <form class="flex flex-col gap-4 xl:flex-row">
+        <input
+          type="email"
+          placeholder="Enter Your Email"
+          class="block px-4 py-3 border-2 border-extend-accent-900 rounded-lg" />
+        <app-btn-primary
+          [haveIcon]="false"
+          [isDark]="true"
+          [text]="'Sign Up'" />
+      </form>
+
+      <p class="text-xs">
+        By clicking Sign Up, you agree to our Terms and Conditions.
+      </p>
+    </div>
+  </div>
+
+  <img
+    src="assets/images/newspaper.jpg"
+    alt="newspaper"
+    width="616"
+    height="400"
+    class="object-cover w-full h-56 rounded-xl md:flex-1 md:h-auto md:max-w-[38.5rem]" />
+</section>
