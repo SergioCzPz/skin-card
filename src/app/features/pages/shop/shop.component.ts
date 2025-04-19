@@ -1,8 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { designs } from '@constants/constants';
+import { DesignCardComponent } from '@shared/components/design-card/design-card.component';
 
 @Component({
   selector: 'app-shop',
-  imports: [],
+  imports: [DesignCardComponent],
   templateUrl: './shop.component.html',
   styles: `
     :host {
@@ -11,4 +13,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ShopComponent { }
+export class ShopComponent {
+  protected designs = designs;
+}

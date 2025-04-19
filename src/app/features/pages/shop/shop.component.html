@@ -1,1 +1,16 @@
-<p>shop works!</p>,
+<section
+  class="py-16 px-5 flex flex-col gap-12 text-extend-text-black md:py-28 md:px-16 md:gap-20">
+  <div class="flex flex-col gap-3">
+    <h3 class="text-base font-bold">Shop</h3>
+    <h2 class="text-4xl font-bold md:text-5xl">Decals</h2>
+    <p class="text-base md:text-lg">
+      Explore Our Unique Designs For Your Cards!
+    </p>
+  </div>
+
+  <div class="grid grid-cols-2 gap-8 lg:grid-cols-4">
+    @for (design of designs; track $index) {
+    <app-design-card [design]="design" />
+    }
+  </div>
+</section>
