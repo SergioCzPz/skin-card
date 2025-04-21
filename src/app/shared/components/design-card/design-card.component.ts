@@ -20,5 +20,5 @@ import { BtnSecondaryComponent } from '../btn-secondary/btn-secondary.component'
 })
 export class DesignCardComponent {
   public design = input.required<Design>();
-  public cardUrl = computed(() => `shop/${this.design().url}`);
+  public cardUrl = computed(() => `product/${this.design().url}`);
 }

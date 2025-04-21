@@ -1,1 +1,123 @@
-<p>product works!</p>,
+<section
+  class="text-extend-text-black py-12 px-5 flex flex-col gap-6 lg:py-20 lg:px-16">
+  <div class="flex gap-2 items-center">
+    <a [routerLink]="['/', 'shop']" class="text-sm">Shop All</a>
+    <img
+      src="assets/images/icons/arrow.svg"
+      alt="arrow"
+      width="24"
+      height="24" />
+    <p class="text-sm font-bold">{{ product()?.name }}</p>
+  </div>
+
+  <div>
+    <div class="flex flex-col gap-8 lg:flex-row lg:gap-20">
+      <img
+        [src]="product()?.imageUrl"
+        [alt]="product()?.name"
+        class="object-contain h-[28.75rem] lg:w-1/2 lg:h-[52.5rem]" />
+
+      <div class="flex flex-col gap-5 md:gap-6">
+        <h2 class="text-3xl font-bold md:text-4xl">{{ product()?.name }}</h2>
+        <p class="text-xl font-bold md:text-2xl">$55</p>
+
+        <div class="flex gap-2">
+          <div class="flex gap-1">
+            <img
+              src="assets/images/icons/star.svg"
+              alt="star"
+              width="16"
+              height="16"
+              class="object-cover" />
+            <img
+              src="assets/images/icons/star.svg"
+              alt="star"
+              width="16"
+              height="16"
+              class="object-cover" />
+            <img
+              src="assets/images/icons/star.svg"
+              alt="star"
+              width="16"
+              height="16"
+              class="object-cover" />
+            <img
+              src="assets/images/icons/star.svg"
+              alt="star"
+              width="16"
+              height="16"
+              class="object-cover" />
+            <img
+              src="assets/images/icons/half-star.svg"
+              alt="half star rate"
+              width="16"
+              height="16"
+              class="object-cover" />
+          </div>
+          <p class="text-base">(4.5 stars) • 10 reviews</p>
+        </div>
+
+        <p class="text-base">
+          Transform your card with this stunning floral decal. Perfect for
+          adding a touch of elegance to your everyday transactions.
+        </p>
+
+        <form class="flex flex-col gap-6">
+          <div class="flex flex-col">
+            <label for="variant" class="text-base">Variant</label>
+            <select
+              name="variant"
+              id="variant"
+              class="py-3 px-4 border-2 border-extend-text-black rounded-xl bg-extend-backgroud-300">
+              <option value="none" selected disabled>No Available</option>
+            </select>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <p class="text-base">Variant</p>
+            <div class="flex gap-4">
+              <app-btn-disable [text]="'Matte Finish'" />
+              <app-btn-disable [text]="'Glossy Finish'" />
+            </div>
+          </div>
+
+          <div class="flex flex-col">
+            <label for="quantity">Quantity</label>
+            <input
+              type="number"
+              min="1"
+              max="10"
+              id="quantity"
+              value="1"
+              class="border-2 border-extend-text-black px-4 py-3 rounded-xl w-20 bg-extend-backgroud-300" />
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <app-btn-primary [isDark]="true" [text]="'Add To Cart'" />
+            <app-btn-secondary [text]="'Buy Now'" [isDark]="true" />
+          </div>
+        </form>
+
+        <p class="text-center">Free shipping over $50</p>
+
+        <div>
+          <app-accordion
+            [title]="'Details'"
+            [content]="
+              'This decal is designed to fit seamlessly on your card. Made with high-quality materials, it ensures durability and style. Elevate your card\'s appearance with this unique design.'
+            " />
+          <app-accordion
+            [title]="'Shipping'"
+            [content]="
+              'We offer fast shipping options to ensure you receive your decals quickly. All orders over $50 qualify for free shipping. Expect your order to arrive within 5-7 business days.'
+            " />
+          <app-accordion
+            [title]="'Returns'"
+            [content]="
+              'If you\'re not completely satisfied with your purchase, you can return it within 30 days for a full refund. Please ensure the decals are unused and in original packaging. Customer satisfaction is our top priority.'
+            " />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
