@@ -21,7 +21,7 @@ export const routes: Routes = [
   {
     path: 'about',
     loadComponent: () =>
-      import('./features/pages/about/about.component').then(
+      import('./features/pages/about/page/about.component').then(
         m => m.AboutComponent
       ),
   },

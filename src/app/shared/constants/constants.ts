@@ -1,5 +1,6 @@
 import { Design } from '@shared/types/design.interface';
 import { Testimonial } from '../types/testimonial';
+import { Member } from '@shared/types/member.interface';
 
 export const testimonials: Testimonial[] = [
   {
@@ -70,5 +71,50 @@ export const designs: Design[] = [
     name: 'White Dots',
     imageUrl: 'assets/images/designs/white-dots.png',
     url: 'white-dots',
+  },
+];
+
+export const members: Member[] = [
+  {
+    name: 'Alice Johnson',
+    position: 'Creative Director',
+    description:
+      'Alice brings innovative design ideas to life, enhancing your card experience with unique decals.',
+    photoUrl: 'assets/images/workers/alice.jpg',
+  },
+  {
+    name: 'Mark Smith',
+    position: 'Operations Manager',
+    description:
+      'Mark ensures smooth operations, making your shopping experience seamless and enjoyable.',
+    photoUrl: 'assets/images/workers/mark.jpg',
+  },
+  {
+    name: 'Sophia Lee',
+    position: 'Marketing Specialist',
+    description:
+      'Sophia crafts compelling campaigns to showcase our unique decal designs to the world.',
+    photoUrl: 'assets/images/workers/sophia.jpg',
+  },
+  {
+    name: 'James Brown',
+    position: 'Customer Support',
+    description:
+      'James is dedicated to assisting customers with any inquiries regarding their decal purchases.',
+    photoUrl: 'assets/images/workers/james.jpg',
+  },
+  {
+    name: 'Emma Davis',
+    position: 'Product Designer',
+    description:
+      'Emma designs eye-catching decals that reflect your personality and style.',
+    photoUrl: 'assets/images/workers/emma.jpg',
+  },
+  {
+    name: `We're hiring!`,
+    position: 'Join Us',
+    description:
+      'Explore exciting career opportunities and become part of our innovative team.',
+    photoUrl: 'assets/images/designs/hiring.jpg',
   },
 ];

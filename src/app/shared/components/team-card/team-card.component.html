@@ -1,0 +1,42 @@
+<div
+  [class]="bgColor()"
+  class="p-5 flex flex-col gap-6 rounded-xl text-extend-text-black mx-w-[25rem] md:min-h-[21rem]">
+  <img
+    [src]="member().photoUrl"
+    [alt]="member().name"
+    width="80"
+    height="80"
+    class="w-20 h-20 rounded-full object-cover object-top" />
+
+  <div class="flex flex-col gap-4">
+    <div>
+      <h5 class="font-bold text-xl">{{ member().name }}</h5>
+      <p class="text-lg">{{ member().position }}</p>
+    </div>
+
+    <p class="text-base">{{ member().description }}</p>
+  </div>
+
+  <div class="flex gap-4">
+    <img
+      src="assets/images/icons/instagram.svg"
+      alt="instagram"
+      class="w-5 h-5 object-cover"
+      width="20"
+      height="20" />
+
+    <img
+      src="assets/images/icons/linkedin.svg"
+      alt="linkedin"
+      class="w-5 h-5 object-cover"
+      width="20"
+      height="20" />
+
+    <img
+      src="assets/images/icons/twitter.svg"
+      alt="twitter"
+      class="w-5 h-5 object-cover"
+      width="20"
+      height="20" />
+  </div>
+</div>

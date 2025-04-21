@@ -1,0 +1,29 @@
+<section
+  class="bg-extend-primary-900 text-extend-backgroud-300 py-16 px-5 flex flex-col gap-12 md:py-28 md:px-16 md:gap-20">
+  <div class="flex flex-col gap-4 md:gap-6">
+    <h5 class="font-bold text-base">Together</h5>
+    <h2 class="font-bold text-4xl md:text-5xl">Our Team</h2>
+    <p class="text-base md:text-lg">
+      Meet the passionate individuals behind our brand.
+    </p>
+  </div>
+
+  <div
+    class="grid grid-cols-1 gap-12 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3">
+    @for (member of members; track $index) {
+    <app-team-card
+      [member]="member"
+      [bgOrange]="members.length === $index + 1" />
+    }
+  </div>
+
+  <div class="flex flex-col gap-4">
+    <h5 class="text-2xl font-bold md:text-3xl">We're hiring!</h5>
+    <p class="text-base md:text-lg">
+      Join our dynamic team and make a difference.
+    </p>
+    <div class="max-w-[10rem] mt-1">
+      <app-btn-secondary [text]="'Open Positions'" />
+    </div>
+  </div>
+</section>
