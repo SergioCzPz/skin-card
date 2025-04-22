@@ -1,6 +1,8 @@
 import { Design } from '@shared/types/design.interface';
 import { Testimonial } from '../types/testimonial';
 import { Member } from '@shared/types/member.interface';
+import { Media } from '@shared/types/media.interface';
+import { Faq } from '@shared/types/faq.interface';
 
 export const testimonials: Testimonial[] = [
   {
@@ -116,5 +118,61 @@ export const members: Member[] = [
     description:
       'Explore exciting career opportunities and become part of our innovative team.',
     photoUrl: 'assets/images/designs/hiring.jpg',
+  },
+];
+
+export const medias: Media[] = [
+  {
+    icon: 'assets/images/icons/email-white.svg',
+    media: 'Email',
+    description: "We'd love to hear from you! Reach out anytime.",
+    contact: 'hello@email.io',
+  },
+  {
+    icon: 'assets/images/icons/chat-white.svg',
+    media: 'Live chat',
+    description: 'Chat with our support team for immediate assistance.',
+    contact: 'Start new chat',
+  },
+  {
+    icon: 'assets/images/icons/contact-white.svg',
+    media: 'Phone',
+    description: 'Call us for quick support or inquiries.',
+    contact: '+1 (555) 000-0000',
+  },
+  {
+    icon: 'assets/images/icons/location-white.svg',
+    media: 'Office',
+    description: 'Visit us at our headquarters for personalized assistance.',
+    contact: '123 Sample St, Sydney NSW 2000 AU',
+  },
+];
+
+export const faqs: Faq[] = [
+  {
+    question:
+      'Find answers to common questions about our decal application and shipping processes.',
+    answer:
+      'Applying decals is simple! Just clean your card surface, peel the decal, and carefully stick it on. Ensure there are no air bubbles for a smooth finish.',
+  },
+  {
+    question: 'What are shipping options?',
+    answer:
+      'We offer standard and expedited shipping options. Standard shipping typically takes 5-7 business days, while expedited shipping arrives within 2-3 business days. You can select your preferred option at checkout.',
+  },
+  {
+    question: 'Can I track my order?',
+    answer:
+      "Yes, you can track your order! Once your order is shipped, you will receive a tracking number via email. Use this number on our website to see your shipment's status.",
+  },
+  {
+    question: 'What if I need help?',
+    answer:
+      'Our customer support team is here to assist you! You can reach out via our contact form or email us directly. We aim to respond within 24 hours.',
+  },
+  {
+    question: 'Are the decals durable?',
+    answer:
+      'Absolutely! Our decals are designed to be durable and withstand daily use. They are made from high-quality materials that resist wear and tear.',
   },
 ];

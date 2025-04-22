@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { medias } from '@constants/constants';
 
 @Component({
-  selector: 'app-contact',
+  selector: 'app-medias',
   imports: [],
-  templateUrl: './contact.component.html',
+  templateUrl: './medias.component.html',
   styles: `
     :host {
       display: block;
@@ -11,4 +12,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ContactComponent { }
+export class MediasComponent {
+  public medias = medias;
+}

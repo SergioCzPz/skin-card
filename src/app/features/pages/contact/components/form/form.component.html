@@ -1,0 +1,76 @@
+<section
+  class="py-16 px-5 flex flex-col gap-12 text-extend-text-black md:py-28 md:px-16 md:flex-row">
+  <div class="flex flex-col gap-6 md:flex-1">
+    <div class="flex flex-col gap-3">
+      <h5 class="font-bold text-base">Connect</h5>
+      <h2 class="font-bold text-4xl md:text-5xl">Get In Touch</h2>
+      <p class="text-base md:text-lg">We'd love to hear from you!</p>
+    </div>
+
+    <div class="flex flex-col gap-4">
+      <div class="flex items-center gap-4">
+        <img
+          src="assets/images/icons/email.svg"
+          alt="email"
+          width="24"
+          height="24" />
+        <p class="text-base">Support&#64;email.com</p>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <img
+          src="assets/images/icons/phone.svg"
+          alt="phone"
+          width="24"
+          height="24" />
+        <p class="text-base">+1 (555) 123-4567</p>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <img
+          src="assets/images/icons/location.svg"
+          alt="location"
+          width="24"
+          height="24" />
+        <p class="text-base">456 Example Ave, New York NY 10001 US</p>
+      </div>
+    </div>
+  </div>
+
+  <form class="flex flex-col gap-6 md:flex-1">
+    <div class="flex flex-col">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        class="py-3 px-4 border-2 border-extend-primary-900 rounded-xl" />
+    </div>
+
+    <div class="flex flex-col">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        class="py-3 px-4 border-2 border-extend-primary-900 rounded-xl" />
+    </div>
+
+    <div class="flex flex-col">
+      <label for="message">Message</label>
+      <textarea
+        name="message"
+        id="message"
+        class="py-3 px-4 border-2 border-extend-primary-900 rounded-xl h-48">
+Write your thoughts...</textarea
+      >
+    </div>
+
+    <div class="flex flex-row-reverse justify-end gap-2">
+      <label for="terms">I Agree To The Terms</label>
+      <input type="checkbox" id="terms" class="w-5 h-5" />
+    </div>
+
+    <div>
+      <app-btn-primary [isDark]="true" [text]="'Send'" />
+    </div>
+  </form>
+</section>

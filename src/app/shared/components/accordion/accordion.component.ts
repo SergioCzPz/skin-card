@@ -22,6 +22,7 @@ import {
 export class AccordionComponent {
   public title = input.required<string>();
   public content = input.required<string>();
+  public hasBorderTop = input<boolean>(true);
   protected paragraph =
     viewChild.required<ElementRef<HTMLParagraphElement>>('paragraph');
   protected isDisplayed = signal(false);

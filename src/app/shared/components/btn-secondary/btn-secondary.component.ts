@@ -4,10 +4,11 @@ import {
   computed,
   input,
 } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-btn-secondary',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './btn-secondary.component.html',
   styles: `
     :host {
