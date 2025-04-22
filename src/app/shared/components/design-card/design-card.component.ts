@@ -5,11 +5,11 @@ import {
   input,
 } from '@angular/core';
 import { Design } from '@shared/types/design.interface';
-import { BtnSecondaryComponent } from '../btn-secondary/btn-secondary.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-design-card',
-  imports: [BtnSecondaryComponent],
+  imports: [RouterLink],
   templateUrl: './design-card.component.html',
   styles: `
     :host {
@@ -20,5 +20,5 @@ import { BtnSecondaryComponent } from '../btn-secondary/btn-secondary.component'
 })
 export class DesignCardComponent {
   public design = input.required<Design>();
-  public cardUrl = computed(() => `product/${this.design().url}`);
+  public cardUrl = computed(() => ['/', 'product', this.design().url]);
 }
