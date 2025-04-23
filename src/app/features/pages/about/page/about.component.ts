@@ -1,8 +1,14 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject,
+  OnInit,
+} from '@angular/core';
 import { AboutHeroComponent } from '../components/about-hero/about-hero.component';
 import { TeamComponent } from '../components/team/team.component';
 import { BannerComponent } from '../components/banner/banner.component';
 import { AboutCtaComponent } from '../components/about-cta/about-cta.component';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
@@ -20,4 +26,40 @@ import { AboutCtaComponent } from '../components/about-cta/about-cta.component';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AboutComponent {}
+export class AboutComponent implements OnInit {
+  private title = inject(Title);
+  private meta = inject(Meta);
+
+  ngOnInit(): void {
+    const pageTitle = 'About Us';
+    const image = 'assets/images/workers/worker.jpg';
+    const description =
+      'At our company, we believe that your card should reflect your personality. Our wide range of customizable decals allows you to express yourself while enhancing the look of your credit or debit card.';
+
+    this.title.setTitle(pageTitle);
+    this.meta.updateTag({
+      name: 'description',
+      content: description,
+    });
+    this.meta.updateTag({
+      name: 'og:title',
+      content: pageTitle,
+    });
+    this.meta.updateTag({
+      name: 'og:description',
+      content: description,
+    });
+    this.meta.updateTag({
+      name: 'og:image',
+      content: image,
+    });
+    this.meta.updateTag({
+      name: 'og:image:width',
+      content: '300',
+    });
+    this.meta.updateTag({
+      name: 'og:image:height',
+      content: '200',
+    });
+  }
+}

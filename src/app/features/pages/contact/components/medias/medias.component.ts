@@ -1,10 +1,9 @@
-import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { medias } from '@constants/constants';
 
 @Component({
   selector: 'app-medias',
-  imports: [NgOptimizedImage],
+  imports: [],
   templateUrl: './medias.component.html',
   styles: `
     :host {

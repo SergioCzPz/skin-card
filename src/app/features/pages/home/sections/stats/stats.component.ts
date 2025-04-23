@@ -1,9 +1,8 @@
-import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-stats',
-  imports: [NgOptimizedImage],
+  imports: [],
   templateUrl: './stats.component.html',
   styles: `
     :host {
