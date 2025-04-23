@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -8,7 +9,7 @@ import { Member } from '@shared/types/member.interface';
 
 @Component({
   selector: 'app-team-card',
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: './team-card.component.html',
   styles: `
     :host {

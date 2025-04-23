@@ -2,7 +2,7 @@
   [class]="bgColor()"
   class="p-5 flex flex-col gap-6 rounded-xl text-extend-text-black mx-w-[25rem] md:min-h-[21rem]">
   <img
-    [src]="member().photoUrl"
+    [ngSrc]="member().photoUrl"
     [alt]="member().name"
     width="80"
     height="80"
@@ -19,21 +19,21 @@
 
   <div class="flex gap-4">
     <img
-      src="assets/images/icons/instagram.svg"
+      ngSrc="assets/images/icons/instagram.svg"
       alt="instagram"
       class="w-5 h-5 object-cover"
       width="20"
       height="20" />
 
     <img
-      src="assets/images/icons/linkedin.svg"
+      ngSrc="assets/images/icons/linkedin.svg"
       alt="linkedin"
       class="w-5 h-5 object-cover"
       width="20"
       height="20" />
 
     <img
-      src="assets/images/icons/twitter.svg"
+      ngSrc="assets/images/icons/twitter.svg"
       alt="twitter"
       class="w-5 h-5 object-cover"
       width="20"

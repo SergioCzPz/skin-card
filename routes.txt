@@ -1,0 +1,12 @@
+/product/astronaut
+/product/astronauts
+/product/blue-space
+/product/dots
+/product/mars
+/product/moon
+/product/orange-astronaut
+/product/orange-planets
+/product/orange-space
+/product/purple-planets
+/product/squares
+/product/white-dots

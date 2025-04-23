@@ -6,10 +6,11 @@ import {
 } from '@angular/core';
 import { Design } from '@shared/types/design.interface';
 import { RouterLink } from '@angular/router';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-design-card',
-  imports: [RouterLink],
+  imports: [RouterLink, NgOptimizedImage],
   templateUrl: './design-card.component.html',
   styles: `
     :host {

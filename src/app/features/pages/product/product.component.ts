@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -22,6 +23,7 @@ import { Design } from '@shared/types/design.interface';
     BtnPrimaryComponent,
     BtnSecondaryComponent,
     AccordionComponent,
+    NgOptimizedImage,
   ],
   templateUrl: './product.component.html',
   styles: `

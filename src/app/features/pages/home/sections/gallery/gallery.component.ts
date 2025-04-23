@@ -1,8 +1,9 @@
+import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-gallery',
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: './gallery.component.html',
   styles: `
     :host {
