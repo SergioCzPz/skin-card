@@ -2,6 +2,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   inject,
+  OnDestroy,
   OnInit,
 } from '@angular/core';
 import { AboutHeroComponent } from '../components/about-hero/about-hero.component';
@@ -9,6 +10,7 @@ import { TeamComponent } from '../components/team/team.component';
 import { BannerComponent } from '../components/banner/banner.component';
 import { AboutCtaComponent } from '../components/about-cta/about-cta.component';
 import { Meta, Title } from '@angular/platform-browser';
+import { cleanScrollTriggers } from 'src/app/shared/utils/clean-trigger.util';
 
 @Component({
   selector: 'app-about',
@@ -26,7 +28,7 @@ import { Meta, Title } from '@angular/platform-browser';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent implements OnInit, OnDestroy {
   private title = inject(Title);
   private meta = inject(Meta);
 
@@ -61,5 +63,9 @@ export class AboutComponent implements OnInit {
       name: 'og:image:height',
       content: '200',
     });
+  }
+
+  ngOnDestroy(): void {
+    cleanScrollTriggers();
   }
 }

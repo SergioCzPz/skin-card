@@ -4,6 +4,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   inject,
+  OnDestroy,
   OnInit,
   PLATFORM_ID,
 } from '@angular/core';
@@ -12,6 +13,7 @@ import { designs } from '@constants/constants';
 import { DesignCardComponent } from '@shared/components/design-card/design-card.component';
 import { fromTo } from 'src/app/shared/animations/fromTo.animation';
 import { staggerAnimation } from 'src/app/shared/animations/stagger.animation';
+import { cleanScrollTriggers } from 'src/app/shared/utils/clean-trigger.util';
 
 @Component({
   selector: 'app-shop',
@@ -24,7 +26,7 @@ import { staggerAnimation } from 'src/app/shared/animations/stagger.animation';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ShopComponent implements OnInit, AfterViewInit {
+export class ShopComponent implements OnInit, AfterViewInit, OnDestroy {
   private readonly platformId = inject(PLATFORM_ID);
   private title = inject(Title);
   private meta = inject(Meta);
@@ -67,5 +69,9 @@ export class ShopComponent implements OnInit, AfterViewInit {
     if (!isPlatformBrowser(this.platformId)) return;
     fromTo('#shop-section', -1);
     staggerAnimation('app-design-card', '#shop-section', 'top bottom');
+  }
+
+  ngOnDestroy(): void {
+    cleanScrollTriggers();
   }
 }

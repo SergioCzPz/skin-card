@@ -4,6 +4,7 @@ import {
   computed,
   CUSTOM_ELEMENTS_SCHEMA,
   effect,
+  OnDestroy,
   signal,
 } from '@angular/core';
 
@@ -13,6 +14,7 @@ import { NgtArgs, NgtVector3 } from 'angular-three';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { animateModel } from 'src/app/shared/animations/model.animation';
+import { cleanScrollTriggers } from 'src/app/shared/utils/clean-trigger.util';
 gsap.registerPlugin(ScrollTrigger);
 
 @Component({
@@ -27,7 +29,7 @@ gsap.registerPlugin(ScrollTrigger);
   changeDetection: ChangeDetectionStrategy.OnPush,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class MoonComponent {
+export class MoonComponent implements OnDestroy {
   public readonly position = signal<NgtVector3>([10, 10, 10]);
   private gltf = injectGLTF(() => 'assets/3D-cards/3D-card-3.glb');
   protected model = computed(() => {
@@ -44,5 +46,9 @@ export class MoonComponent {
 
       animateModel('#moon-card', model, this.position);
     });
+  }
+
+  ngOnDestroy(): void {
+    cleanScrollTriggers();
   }
 }

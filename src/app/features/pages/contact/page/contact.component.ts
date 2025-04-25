@@ -2,6 +2,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   inject,
+  OnDestroy,
   OnInit,
 } from '@angular/core';
 import { ContactHeroComponent } from '../components/contact-hero/contact-hero.component';
@@ -9,6 +10,7 @@ import { MediasComponent } from '../components/medias/medias.component';
 import { FormComponent } from '../components/form/form.component';
 import { FaqComponent } from '../components/faq/faq.component';
 import { Meta, Title } from '@angular/platform-browser';
+import { cleanScrollTriggers } from 'src/app/shared/utils/clean-trigger.util';
 
 @Component({
   selector: 'app-contact',
@@ -21,7 +23,7 @@ import { Meta, Title } from '@angular/platform-browser';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements OnInit, OnDestroy {
   private title = inject(Title);
   private meta = inject(Meta);
 
@@ -56,5 +58,9 @@ export class ContactComponent implements OnInit {
       name: 'og:image:height',
       content: '200',
     });
+  }
+
+  ngOnDestroy(): void {
+    cleanScrollTriggers();
   }
 }

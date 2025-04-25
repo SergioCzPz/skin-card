@@ -4,6 +4,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   inject,
+  OnDestroy,
   OnInit,
   PLATFORM_ID,
   signal,
@@ -18,6 +19,7 @@ import { BtnPrimaryComponent } from '@shared/components/btn-primary/btn-primary.
 import { BtnSecondaryComponent } from '@shared/components/btn-secondary/btn-secondary.component';
 import { Design } from '@shared/types/design.interface';
 import { fromTo } from 'src/app/shared/animations/fromTo.animation';
+import { cleanScrollTriggers } from 'src/app/shared/utils/clean-trigger.util';
 
 @Component({
   selector: 'app-product',
@@ -36,7 +38,7 @@ import { fromTo } from 'src/app/shared/animations/fromTo.animation';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProductComponent implements OnInit, AfterViewInit {
+export class ProductComponent implements OnInit, AfterViewInit, OnDestroy {
   private readonly platformId = inject(PLATFORM_ID);
   private title = inject(Title);
   private meta = inject(Meta);
@@ -84,5 +86,9 @@ export class ProductComponent implements OnInit, AfterViewInit {
     if (!isPlatformBrowser(this.platformId)) return;
 
     fromTo('#product-section', -1);
+  }
+
+  ngOnDestroy(): void {
+    cleanScrollTriggers();
   }
 }

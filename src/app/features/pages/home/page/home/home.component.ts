@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy } from '@angular/core';
 import { HeroComponent } from '../../sections/hero/hero.component';
 import { FeaturesComponent } from '../../sections/features/features.component';
 import { GalleryComponent } from '../../sections/gallery/gallery.component';
@@ -7,6 +7,7 @@ import { StatsComponent } from '../../sections/stats/stats.component';
 import { TestimonialsComponent } from '../../sections/testimonials/testimonials.component';
 import { CtaComponent } from '../../sections/cta/cta.component';
 import { JoinComponent } from '../../sections/join/join.component';
+import { cleanScrollTriggers } from 'src/app/shared/utils/clean-trigger.util';
 
 @Component({
   selector: 'app-home',
@@ -28,4 +29,8 @@ import { JoinComponent } from '../../sections/join/join.component';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent {}
+export class HomeComponent implements OnDestroy {
+  ngOnDestroy(): void {
+    cleanScrollTriggers();
+  }
+}
