@@ -1,12 +1,17 @@
+import { isPlatformBrowser } from '@angular/common';
 import {
+  AfterViewInit,
   ChangeDetectionStrategy,
   Component,
   inject,
   OnInit,
+  PLATFORM_ID,
 } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { designs } from '@constants/constants';
 import { DesignCardComponent } from '@shared/components/design-card/design-card.component';
+import { fromTo } from 'src/app/shared/animations/fromTo.animation';
+import { staggerAnimation } from 'src/app/shared/animations/stagger.animation';
 
 @Component({
   selector: 'app-shop',
@@ -19,7 +24,8 @@ import { DesignCardComponent } from '@shared/components/design-card/design-card.
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ShopComponent implements OnInit {
+export class ShopComponent implements OnInit, AfterViewInit {
+  private readonly platformId = inject(PLATFORM_ID);
   private title = inject(Title);
   private meta = inject(Meta);
 
@@ -55,5 +61,11 @@ export class ShopComponent implements OnInit {
       name: 'og:image:height',
       content: '200',
     });
+  }
+
+  ngAfterViewInit(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
+    fromTo('#shop-section', -1);
+    staggerAnimation('app-design-card', '#shop-section', 'top bottom');
   }
 }

@@ -1,8 +1,11 @@
+import { isPlatformBrowser } from '@angular/common';
 import {
+  AfterViewInit,
   ChangeDetectionStrategy,
   Component,
   inject,
   OnInit,
+  PLATFORM_ID,
   signal,
   WritableSignal,
 } from '@angular/core';
@@ -14,6 +17,7 @@ import { BtnDisableComponent } from '@shared/components/btn-disable/btn-disable.
 import { BtnPrimaryComponent } from '@shared/components/btn-primary/btn-primary.component';
 import { BtnSecondaryComponent } from '@shared/components/btn-secondary/btn-secondary.component';
 import { Design } from '@shared/types/design.interface';
+import { fromTo } from 'src/app/shared/animations/fromTo.animation';
 
 @Component({
   selector: 'app-product',
@@ -32,7 +36,8 @@ import { Design } from '@shared/types/design.interface';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProductComponent implements OnInit {
+export class ProductComponent implements OnInit, AfterViewInit {
+  private readonly platformId = inject(PLATFORM_ID);
   private title = inject(Title);
   private meta = inject(Meta);
 
@@ -73,5 +78,11 @@ export class ProductComponent implements OnInit {
       name: 'og:image:height',
       content: '200',
     });
+  }
+
+  ngAfterViewInit(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
+
+    fromTo('#product-section', -1);
   }
 }

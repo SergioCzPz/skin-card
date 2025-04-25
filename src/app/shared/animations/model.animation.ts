@@ -10,7 +10,7 @@ export const animateModel = (
 ) => {
   const tl = gsap.timeline({
     scrollTrigger: {
-      trigger: '#moon-card',
+      trigger: trigger,
       start: -1,
       end: 'bottom',
     },

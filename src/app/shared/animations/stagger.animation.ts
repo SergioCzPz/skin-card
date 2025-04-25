@@ -20,8 +20,8 @@ export const staggerAnimation = (
       },
       y: 0,
       opacity: 1,
-      duration: 1,
-      stagger: 0.25,
+      duration: 1.5,
+      stagger: 0.3,
       ease: 'power2.inOut',
     }
   );
