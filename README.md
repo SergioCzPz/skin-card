@@ -18,7 +18,8 @@
 ## About
 
 This project uses [GSAP](https://gsap.com) library, [Angular Three](https://angularthree.org) and [Angular](https://angular.dev).
-The main goal was implementing a design using [Figma](https://www.figma.com). You can check the project [Here](https://www.figma.com/design/BEVmDZjr5xwhPhE0XpMHYK/SkinCard?m=auto&t=mpQYPQsC7wHLz21v-1).
+The main goal was implementing a design using [Figma](https://www.figma.com). You can check the project [Here](https://www.figma.com/design/BEVmDZjr5xwhPhE0XpMHYK/SkinCard?m=auto&t=mpQYPQsC7wHLz21v-1).  
+Visit [This SkinCard Website](https://skincard.netlify.app)
 
 ---
 
